@@ -3,7 +3,7 @@
 
 extends Sprite2D
 
-var speed = 1000
+@export var speed = 1000
 var screen_size
 var sprite_x
 
@@ -11,7 +11,7 @@ var sprite_x
 func _ready():
 	screen_size = get_viewport_rect().size
 	# https://ask.godotengine.org/71609/clamp-2d-not-working-in-main-scene
-	sprite_x = self.texture.get_width() / 2
+	sprite_x = (texture.get_width() * scale.x) / 2
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
