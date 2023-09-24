@@ -3,7 +3,7 @@
 
 extends Sprite2D
 
-#@export var speed = 1000
+@export var speed = 1000
 var screen_size
 var sprite_x
 
