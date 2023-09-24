@@ -3,7 +3,7 @@
 
 extends Sprite2D
 
-var speed = 400
+var speed = 1000
 var screen_size
 var sprite_x
 
@@ -21,3 +21,5 @@ func _process(delta):
 	position.y = clamp(position.y, 0, screen_size.y)
 	if position.x == screen_size.x - sprite_x:
 		speed = -(speed)
+	elif position.x == 0 + sprite_x:
+		speed = speed * -1
