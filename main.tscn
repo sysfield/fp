@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5yecyqjjf1e3"]
+[gd_scene load_steps=5 format=3 uid="uid://c5yecyqjjf1e3"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_ahm4a"]
 [ext_resource type="PackedScene" uid="uid://yga4xjgut33h" path="res://enemy.tscn" id="2_f1nyg"]
+[ext_resource type="PackedScene" uid="uid://dpu2mvg0vbwdn" path="res://player.tscn" id="3_cmgm6"]
 
 [sub_resource type="Curve2D" id="Curve2D_ai5jr"]
 _data = {
@@ -19,3 +20,5 @@ curve = SubResource("Curve2D_ai5jr")
 [node name="EnemyPathFollow" type="PathFollow2D" parent="EnemyPath"]
 position = Vector2(816, 488)
 rotation = -0.216085
+
+[node name="Player" parent="." instance=ExtResource("3_cmgm6")]

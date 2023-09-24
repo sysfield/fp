@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://yga4xjgut33h"]
+[gd_scene load_steps=5 format=3 uid="uid://yga4xjgut33h"]
 
 [ext_resource type="Script" path="res://Enemy.gd" id="1_imgcf"]
 [ext_resource type="Texture2D" uid="uid://cbxorprswtjjc" path="res://icon.svg" id="2_5jqb3"]
@@ -6,13 +6,22 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_odow4"]
 size = Vector2(64, 66)
 
-[node name="RigidBody2D" type="RigidBody2D"]
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_tmyq0"]
+points = PackedVector2Array(0, 0, 10, 10, -10, 10)
+
+[node name="EnemyBody" type="RigidBody2D"]
 gravity_scale = 0.0
 script = ExtResource("1_imgcf")
+speed = null
 
-[node name="Enemy" type="Sprite2D" parent="."]
+[node name="EnemySprite" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_5jqb3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="EnemyCollisionShape" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_odow4")
+
+[node name="EnemyShapeCast" type="ShapeCast2D" parent="."]
+top_level = true
+shape = SubResource("ConvexPolygonShape2D_tmyq0")
+collide_with_areas = true

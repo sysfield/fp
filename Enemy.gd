@@ -1,7 +1,7 @@
 # initial skeleton for code obtained here:
 # https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html
 
-extends Sprite2D
+extends RigidBody2D
 
 @export var speed = 1000
 var screen_size
@@ -11,7 +11,7 @@ var sprite_x
 func _ready():
 	screen_size = get_viewport_rect().size
 	# https://ask.godotengine.org/71609/clamp-2d-not-working-in-main-scene
-	sprite_x = (texture.get_width() * scale.x) / 2
+#	sprite_x = (texture.get_width() * scale.x) / 2
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
