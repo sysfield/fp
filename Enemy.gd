@@ -22,4 +22,4 @@ func _process(delta):
 	if position.x == screen_size.x - sprite_x:
 		speed = -(speed)
 	elif position.x == 0 + sprite_x:
-		speed = speed * -1
+		speed = speed * -2
