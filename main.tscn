@@ -17,3 +17,5 @@ enemy_scene = ExtResource("2_f1nyg")
 curve = SubResource("Curve2D_ai5jr")
 
 [node name="EnemyPathFollow" type="PathFollow2D" parent="EnemyPath"]
+position = Vector2(816, 488)
+rotation = -0.216085

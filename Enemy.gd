@@ -3,7 +3,7 @@
 
 extends Sprite2D
 
-@export var speed = 1000
+#@export var speed = 1000
 var screen_size
 var sprite_x
 
@@ -16,10 +16,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position.x += speed * delta
-	position.x = clamp(position.x, 0 + sprite_x, screen_size.x - sprite_x)
-	position.y = clamp(position.y, 0, screen_size.y)
-	if position.x == screen_size.x - sprite_x:
-		speed = -(speed)
-	elif position.x == 0 + sprite_x:
-		speed = speed * -1
+#	position.x += speed * delta
+#	position.x = clamp(position.x, 0 + sprite_x, screen_size.x - sprite_x)
+#	position.y = clamp(position.y, 0, screen_size.y)
+#	if position.x == screen_size.x - sprite_x:
+#		speed = -(speed)
+#	elif position.x == 0 + sprite_x:
+#		speed = speed * -1
